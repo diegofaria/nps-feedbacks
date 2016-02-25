@@ -37,7 +37,7 @@ function classifyResponses(responses) {
             if (response.score >= 0 && response.score <= 6){
                 detractors.push(response)
             }
-            else if (response.score >= 8){
+            else if (response.score >= 9){
                 promoters.push(response)
             }
         }
@@ -50,29 +50,31 @@ function showResponses() {
         var responseFunction = showResponsesFunctions.shift()
         showResponsesFunctions.push(responseFunction)
         responseFunction()
-    }, 1000)
+    }, 10000)
 }
 
 function showDetractors() {
-    var detractor = detractors.shift()
-    detractors.push(detractor)
+    var detractor = detractors.pop()
+    detractors.unshift(detractor)
     $('.js-responser-type').removeClass('promoter').addClass('detractor')
     $('.js-score').removeClass('promoter').addClass('detractor')
+    $('.js-responser-type').text('Detractor :/')
     updateInfos(detractor)
 }
 
 function showPromoters() {
-    var promoter = promoters.shift()
-    promoters.push(promoter)
+    var promoter = promoters.pop()
+    promoters.unshift(promoter)
     $('.js-responser-type').removeClass('detractor').addClass('promoter')
     $('.js-score').removeClass('detractor').addClass('promoter')
+    $('.js-responser-type').text('Promoter :)')
     updateInfos(promoter)
 }
 
 function updateInfos(response) {
-    $('.js-responser-type').text('DETRACTOR :/')
+    $('.js-nps').show()
     $('.js-score').text(response.score)
-    $('.js-user').text("FALTA COLOCAR USER")
+    // $('.js-user').text("FALTA COLOCAR USER")
     $('.js-feedback').text(response.text)
     $('.js-details').text(response.origin_url)
 }
