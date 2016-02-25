@@ -5,11 +5,8 @@ html {
 
 body {
     background-color: white;
+    margin: 5% 10%;
     font-family: 'Open Sans', sans-serif;
-}
-
-main {
-    padding: 5% 10%;
 }
 
 section.header {
