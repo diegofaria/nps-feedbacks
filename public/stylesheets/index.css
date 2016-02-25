@@ -5,60 +5,44 @@ html {
 
 body {
     background-color: white;
-    margin: 5% 10%;
+    margin: 10%;
     font-family: 'Open Sans', sans-serif;
 }
 
-section.header {
-    float: left;
-    width: 100%;
-}
-
-section.header h1 {
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-top: 5%;
-    font-family: 'Monda', sans-serif;
-}
-
-section.header > div.right > p.score {
-    font-size: 180px;
+p.score {
+    font-size: 400px;
     font-weight: 700;
     margin: 0;
     text-align: center
 }
 
-section.header > div.right > p.nps {
+p.nps {
     color: #bfbfbf;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
     text-align: center;
+    margin-top: 40px;
 }
 
-section.user-feedback {
-    clear: both;
-    padding-top: 3%
-}
-
-section.user-feedback > h2 {
+p.feedback {
     color: #4a4a4a;
-    font-size: 50px;
-    font-weight: 700;
-}
-
-section.user-feedback > p.feedback {
-    color: #4a4a4a;
-    font-size: 48px;
+    font-size: 70px;
     font-weight: 400;
     letter-spacing: 1px;
+    text-transform: lowercase;
+    margin-top: 0;
 }
 
-section.user-feedback > p.legenda {
+p.feedback:first-letter {
+    text-transform: uppercase;
+}
+
+p.legenda {
     color: #9b9b9b;
     font-size: 29px;
     font-weight: 400;
+    text-transform: 
 }
 
 .left {

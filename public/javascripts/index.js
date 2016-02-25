@@ -56,18 +56,14 @@ function showResponses() {
 function showDetractors() {
     var detractor = detractors.pop()
     detractors.unshift(detractor)
-    $('.js-responser-type').removeClass('promoter').addClass('detractor')
     $('.js-score').removeClass('promoter').addClass('detractor')
-    $('.js-responser-type').text('Detractor :/')
     updateInfos(detractor)
 }
 
 function showPromoters() {
     var promoter = promoters.pop()
     promoters.unshift(promoter)
-    $('.js-responser-type').removeClass('detractor').addClass('promoter')
     $('.js-score').removeClass('detractor').addClass('promoter')
-    $('.js-responser-type').text('Promoter :)')
     updateInfos(promoter)
 }
 
