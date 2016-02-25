@@ -20,6 +20,7 @@ section.header {
 section.header h1 {
     font-size: 70px;
     font-weight: 700;
+    text-transform: uppercase;
     padding-top: 5%;
     font-family: 'Monda', sans-serif;
 }
