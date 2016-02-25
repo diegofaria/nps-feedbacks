@@ -1,3 +1,4 @@
 # NPS Feedbacks
 Display NPS feedbacks randomly in a full-screen.
-![Imgur](http://i.imgur.com/DGx6NKu.png)
+![Promotor](http://i.imgur.com/UXufDlN.png)
+![Detractor](http://i.imgur.com/Tr6cvuj.png)
