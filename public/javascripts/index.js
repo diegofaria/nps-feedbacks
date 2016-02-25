@@ -37,7 +37,7 @@ function classifyResponses(responses) {
             if (response.score >= 0 && response.score <= 6){
                 detractors.push(response)
             }
-            else if (response.score >= 8){
+            else if (response.score >= 9){
                 promoters.push(response)
             }
         }
@@ -54,8 +54,8 @@ function showResponses() {
 }
 
 function showDetractors() {
-    var detractor = detractors.shift()
-    detractors.push(detractor)
+    var detractor = detractors.pop()
+    detractors.unshift(detractor)
     $('.js-responser-type').removeClass('promoter').addClass('detractor')
     $('.js-score').removeClass('promoter').addClass('detractor')
     $('.js-responser-type').text('DETRACTOR :/')
@@ -63,8 +63,8 @@ function showDetractors() {
 }
 
 function showPromoters() {
-    var promoter = promoters.shift()
-    promoters.push(promoter)
+    var promoter = promoters.pop()
+    promoters.unshift(promoter)
     $('.js-responser-type').removeClass('detractor').addClass('promoter')
     $('.js-score').removeClass('detractor').addClass('promoter')
     $('.js-responser-type').text('PROMOTER :)')
