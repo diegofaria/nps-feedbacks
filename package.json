@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/diegofaria/nps-feedbacks/issues"
   },
-  "homepage": "https://github.com/diegofaria/nps-feedbacks#readme"
+  "homepage": "https://github.com/diegofaria/nps-feedbacks#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
