@@ -50,7 +50,7 @@ function showResponses() {
         var responseFunction = showResponsesFunctions.shift()
         showResponsesFunctions.push(responseFunction)
         responseFunction()
-    }, 1000)
+    }, 10000)
 }
 
 function showDetractors() {
@@ -58,6 +58,7 @@ function showDetractors() {
     detractors.push(detractor)
     $('.js-responser-type').removeClass('promoter').addClass('detractor')
     $('.js-score').removeClass('promoter').addClass('detractor')
+    $('.js-responser-type').text('DETRACTOR :/')
     updateInfos(detractor)
 }
 
@@ -66,13 +67,14 @@ function showPromoters() {
     promoters.push(promoter)
     $('.js-responser-type').removeClass('detractor').addClass('promoter')
     $('.js-score').removeClass('detractor').addClass('promoter')
+    $('.js-responser-type').text('PROMOTER :)')
     updateInfos(promoter)
 }
 
 function updateInfos(response) {
-    $('.js-responser-type').text('DETRACTOR :/')
+    $('.js-nps').show()
     $('.js-score').text(response.score)
-    $('.js-user').text("FALTA COLOCAR USER")
+    // $('.js-user').text("FALTA COLOCAR USER")
     $('.js-feedback').text(response.text)
     $('.js-details').text(response.origin_url)
 }
